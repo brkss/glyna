@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
   heading: {
     fontWeight: "bold",
     fontSize: 30,
+    color : 'white'
   },
   currentReadingContainer: {
     marginTop: 10,
@@ -33,13 +34,16 @@ const styles = StyleSheet.create({
   currentReadingValue: {
     fontSize: 70,
     fontWeight: 500,
+    color: "white",
   },
   currentReadingUnit: {
     fontSize: 25,
     marginLeft: 4,
+    color: "white",
   },
   readingTime: {
     textAlign: "left",
     opacity: 0.8,
+    color: "white",
   },
 });
