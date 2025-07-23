@@ -1,6 +1,6 @@
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 interface Props {
   title: string;
@@ -16,13 +16,13 @@ export const SettingItem: React.FC<Props> = ({
   iconName,
 }) => {
   return (
-    <View style={styles.container}>
+    <Pressable onPress={onClick} style={styles.container}>
       <View style={styles.titleContainer}>
         <Icon name={iconName} size={20} />
         <Text style={styles.text}>{title}</Text>
       </View>
       <FontAwesome6 name="arrow-right-long" size={20} color="black" />
-    </View>
+    </Pressable>
   );
 };
 

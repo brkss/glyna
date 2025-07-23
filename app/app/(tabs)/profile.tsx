@@ -4,6 +4,8 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 
+import { useRouter } from "expo-router";
+
 import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -14,7 +16,7 @@ const _tmp = [
     items: [
       {
         title: "Data Source",
-        link: "",
+        link: "/Settings/DataSource",
         Icon: FontAwesome,
         iconName: "chain",
       },
@@ -81,6 +83,8 @@ const _tmp = [
 ];
 
 const ProfilePage: React.FC = () => {
+  const router = useRouter();
+
   return (
     <SafeAreaView>
       <ScrollView style={styles.container}>
@@ -92,7 +96,13 @@ const ProfilePage: React.FC = () => {
               {cat.items.map((item, key) => (
                 <SettingItem
                   title={item.title}
-                  onClick={() => {}}
+                  onClick={() => {
+                    if (item.link) {
+                      router.push(item.link as any);
+                    } else {
+                      console.log(`Clicked on ${item.title}`);
+                    }
+                  }}
                   key={key}
                   Icon={item.Icon}
                   iconName={item.iconName}
@@ -124,4 +134,5 @@ const styles = StyleSheet.create({
     marginBottom: 11,
     opacity: 0.8,
   },
+
 });
