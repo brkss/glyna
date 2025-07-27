@@ -3,6 +3,7 @@ import Feather from "@expo/vector-icons/Feather";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
+import { Image } from "react-native";
 
 import { useRouter } from "expo-router";
 
@@ -86,9 +87,32 @@ const ProfilePage: React.FC = () => {
   const router = useRouter();
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ backgroundColor: "#fff" }}>
       <ScrollView style={styles.container}>
         <Text style={styles.heading}>Settings</Text>
+        <View>
+          <View
+            style={{
+              padding: 10,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Image
+              source={require("@/assets/images/user-default.jpg")}
+              style={{
+                width: 80,
+                height: 80,
+                borderRadius: 50,
+                backgroundColor: "lightgray",
+                padding: 15,
+              }}
+            />
+            <Text style={{ marginTop: 10, fontSize: 16, fontWeight: "bold" }}>
+              John Doe
+            </Text>
+          </View>
+        </View>
         <View style={{ marginTop: 27 }}>
           {_tmp.map((cat, key) => (
             <View style={{ marginBottom: 20 }} key={key}>
@@ -123,15 +147,16 @@ export default ProfilePage;
 const styles = StyleSheet.create({
   container: {
     padding: 20,
+    backgroundColor: "#ffffff",
   },
   heading: {
     fontSize: 32,
     fontWeight: "bold",
   },
   categoryTitle: {
-    fontSize: 18,
+    fontSize: 14,
     fontWeight: "bold",
     marginBottom: 11,
-    opacity: 0.8,
+    opacity: 0.7,
   },
 });
