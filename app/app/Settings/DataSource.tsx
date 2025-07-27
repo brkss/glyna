@@ -1,20 +1,17 @@
+import { ModalView } from "@/component/common";
+import { useRouter } from "expo-router";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text } from "react-native";
 
 const SettingsDataSource = () => {
+  const router = useRouter();
   return (
-    <View style={styles.container}>
+    <ModalView>
       <Text>Data Source</Text>
-    </View>
+    </ModalView>
   );
 };
 
 export default SettingsDataSource;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
+const styles = StyleSheet.create({});

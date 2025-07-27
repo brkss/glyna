@@ -16,7 +16,7 @@ const _tmp = [
     items: [
       {
         title: "Data Source",
-        link: "/Settings/DataSource",
+        link: "/settings/DataSource",
         Icon: FontAwesome,
         iconName: "chain",
       },
@@ -134,5 +134,4 @@ const styles = StyleSheet.create({
     marginBottom: 11,
     opacity: 0.8,
   },
-
 });
