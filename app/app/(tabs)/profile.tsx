@@ -17,7 +17,7 @@ const _tmp = [
     items: [
       {
         title: "Data Source",
-        link: "/settings/DataSource",
+        link: "/Settings/DataSource",
         Icon: FontAwesome,
         iconName: "chain",
       },
