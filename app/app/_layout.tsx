@@ -8,7 +8,7 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen
-          name="settings/DataSource"
+          name="Settings/DataSource"
           options={{
             presentation: "transparentModal",
             title: "Data Source",
